@@ -19,12 +19,10 @@ public class OkhttpClientTest {
         for(int i=0;i<210;i++){
             call = okHttpClient.newCall(request);
             call.enqueue(new Callback() {
-                @Override
                 public void onFailure(@NotNull Call call, @NotNull IOException e) {
                     log.info("出现异常：{}",e.getMessage());
                 }
 
-                @Override
                 public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                     count++;
 //                    log.info("成功：{}",response.body().string());

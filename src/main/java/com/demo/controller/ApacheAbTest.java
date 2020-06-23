@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.sun.javafx.binding.StringFormatter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ public class ApacheAbTest {
 //            e.printStackTrace();
 //        }
 //        return "hello ab test";
+        String.format()
         return true;
     }
 
