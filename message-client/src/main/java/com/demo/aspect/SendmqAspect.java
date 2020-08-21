@@ -19,17 +19,17 @@ public class SendmqAspect {
 
     }
 
-    @Before("pointCut()")
+    @Before("@annotation(com.demo.annotation.Sendmq)")
     public void dobefore(){
         System.out.println("before");
     }
 
-    @After("pointCut()")
+    @After("@annotation(com.demo.annotation.Sendmq)")
     public void doAfter(){
         System.out.println("after");
     }
 
-    @Around("pointCut()")
+    @Around("@annotation(com.demo.annotation.Sendmq)")
     public Object doAround(ProceedingJoinPoint pjp) throws Throwable {
         System.out.println("aaaaaa");
         String targetName = pjp.getClass().getName();
